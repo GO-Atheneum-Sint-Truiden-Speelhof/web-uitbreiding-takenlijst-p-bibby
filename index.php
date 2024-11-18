@@ -41,7 +41,7 @@
         </tr>
       </thead>
       <tbody id="taskTableBody">
-        <!-- Dynamische taken worden hier weergegeven -->
+        
       </tbody>
     </table>
   </div>

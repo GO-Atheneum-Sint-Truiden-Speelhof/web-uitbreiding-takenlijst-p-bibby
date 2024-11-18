@@ -1,7 +1,34 @@
-Bogedna mijdsqfùpokdsjfmiyt"a7
-<dskfugds>
-    <mdshfopzp>d,f</mdshfopzp>
-    <d></d>
-</dskfugds>
-<f1></f1>
-ohediuzefoinfezàçj
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Taakbeheer</h1>
+    <form id="taskForm" class="mb-4">
+      <div class="mb-3">
+        <label for="taskName" class="form-label">Taaknaam</label>
+        <input type="text" id="taskName" class="form-control" placeholder="Voer de taaknaam in" required>
+      </div>
+      <div class="mb-3">
+        <label for="taskDescription" class="form-label">Omschrijving</label>
+        <textarea id="taskDescription" class="form-control" placeholder="Voer een omschrijving in" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="taskDeadline" class="form-label">Deadline</label>
+        <input type="date" id="taskDeadline" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Taak Toevoegen</button>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

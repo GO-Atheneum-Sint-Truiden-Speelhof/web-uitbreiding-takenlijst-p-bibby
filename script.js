@@ -1,14 +1,14 @@
 let tasks = [];
 let taskId = 0;
 
-// Select DOM-elementen
+
 const taskForm = document.getElementById('taskForm');
 const taskName = document.getElementById('taskName');
 const taskDescription = document.getElementById('taskDescription');
 const taskDeadline = document.getElementById('taskDeadline');
 const taskTableBody = document.getElementById('taskTableBody');
 
-// Formulierverwerking
+
 taskForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -22,14 +22,14 @@ taskForm.addEventListener('submit', function (event) {
   taskForm.reset();
 });
 
-// Functie om een taak toe te voegen
+
 function addTask(name, description, deadline) {
   taskId++;
   tasks.push({ id: taskId, name, description, deadline });
   renderTasks();
 }
 
-// Functie om taken weer te geven
+
 function renderTasks() {
   taskTableBody.innerHTML = '';
   tasks.forEach((task, index) => {
@@ -48,7 +48,7 @@ function renderTasks() {
   });
 }
 
-// Functie om een taak te bewerken
+
 function editTask(id) {
   const task = tasks.find(t => t.id === id);
   if (!task) return;
@@ -64,7 +64,7 @@ function editTask(id) {
   renderTasks();
 }
 
-// Functie om een taak te verwijderen
+
 function deleteTask(id) {
   tasks = tasks.filter(t => t.id !== id);
   renderTasks();

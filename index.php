@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="opmaak/bootstrap.css">
   <title>Taakbeheer</title>
-  <link href="bootstrap.js" rel="stylesheet">
+  <script src="scripts/bootstrap.js"></script>
   <style>
     .container {
       margin-top: 30px;

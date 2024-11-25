@@ -1,71 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<!doctype html>
+<html lang=nl>
+ 
+<?php include('includes/head.php'); ?>
+ 
 <body>
-    
-<h1> login </h1>
-
+<h1>Login</h1>
 <?php if (isset($_POST["username"]) && !empty($_POST["username"])){
-    $servername = 'localhost';
-    $database = 'database';
-    $db_user = 'root';
-    $db_pwd = ' ';
-
-    $conn = new mysqli($servername, $db_user, $db_pwd, $database);
-    if ($conn->connect_errno){
-        echo 'Failed to connect: '.$conn->connect_error;
+    $servername='localhost'
+    $database="taak"
+    $db_user='root';
+    $db_password='ishpal';
+ 
+    $conn= new mysqli($servername, $db_user, $db_pwd,$database);
+    if($conn-> connect_errno){
+        echo 'Failed to connect: '.$conn-> connnect_error;
+ 
     }
-    $qry = "SELECT Password FROM users WHERE username = ' ".$_POST["username"]."'";
+    $qry ="SELECT paswoord FROM users WHERE Username = '".$_POST["username"]."";
     echo $qry;
-    
-
+    $result=$conn-> query($qry);
+    if($result-> num_rows > 0){
+        $rij= $reult -> fetch_row();
+        $p= $rij[0];
+        if( password_verify($_POST["paswoord"], $p));
+    }else{
+            }
+}else{
+    ?>
+    <form action='index.php' method='post'>
+    <label for='username'> Gebruikersnaam: </label>
+    <input name='username' id='username' type='text'>
+    <label for='passwoord'> Paswoord: </label>
+    <input name= 'passwoord' id='passwoord' type='password'>
+    <button type='submit'> Login</button>
+    </form>
+    <?php
 }
-
-<form action= 'index.php' method='post'>
-
-    <label for= 'username'> Gebruikersnaam: </label>
-    <input name= 'username' id='username' type= 'text'>
-    <label for = 'paswoord'> Paswoord: </label>
-    <input name= 'paswoord' id= 'paswoord' type= 'paswoord'>
-    <button type ='submit'> Login: </button>
-
-
-
-</form>
-<?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taakbeheer</title>
-  <link href="path/to/bootstrap.js" rel="stylesheet">
+  <link href="bootstrap.js" rel="stylesheet">
   <style>
     .container {
       margin-top: 30px;

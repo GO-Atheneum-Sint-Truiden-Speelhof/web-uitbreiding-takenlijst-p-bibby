@@ -6,19 +6,17 @@
   <link rel="stylesheet" href="opmaak/bootstrap.css">
   <title>Taakbeheer</title>
   <script src="scripts/bootstrap.js"></script>
-  <style>
-    .container {
-      margin-top: 30px;
-    }
-  </style>
 </head>
+<?php
+    include("conect.php");
+?>
 <body>
   <div class="container">
     <h1 class="text-center">Taakbeheer</h1>
-    <form id="taskForm" class="mb-4">
+    <form action="index.php" method="post">
       <div class="mb-3">
         <label for="taskName" class="form-label">Taaknaam</label>
-        <input type="text" id="taskName" class="form-control" placeholder="Voer de taaknaam in" required>
+        <input type="text" id="taskName" name="taskName" class="form-control" placeholder="Voer de taaknaam in" required>
       </div>
       <div class="mb-3">
         <label for="taskDescription" class="form-label">Omschrijving</label>
@@ -30,6 +28,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Taak Toevoegen</button>
     </form>
+    <?php saveToDataBase(); ?>
     <h2 class="text-center">Takenlijst</h2>
     <table class="table table-striped">
       <thead class="table-dark">
@@ -42,7 +41,9 @@
         </tr>
       </thead>
       <tbody id="taskTableBody">
-        
+        <?php
+            PrintDataBase();
+        ?>
       </tbody>
     </table>
   </div>

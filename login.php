@@ -9,6 +9,11 @@
 </head>
 
 <body>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="login.php">Login</a>
+  <a href="logout.php">Log out</a>
+</div>
 <form action="index.php?page=login" method="post">
   
   <div class="container">

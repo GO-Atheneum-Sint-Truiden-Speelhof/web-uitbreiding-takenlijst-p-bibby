@@ -11,6 +11,11 @@
     include("conect.php");
 ?>
 <body>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="login.php">Login</a>
+  <a href="logout.php">Log out</a>
+</div>
   <div class="container">
     <h1 class="text-center">Taakbeheer</h1>
     <form action="index.php" method="post">

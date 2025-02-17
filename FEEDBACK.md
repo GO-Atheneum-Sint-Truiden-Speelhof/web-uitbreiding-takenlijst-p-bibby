@@ -6,7 +6,7 @@
 | De leerling toon de lijst van taken in een tabel.  | X| | | |5 |
 | De leerling zorgt dat de layout responsief is. (Bootstrap)  | X| | | | 5|
 | De leerling creeërt een correcte databank + tabel voor de gegevens. | |X | | |3 |
-| De leerling kan de gegevens van een taak bewaren in een databank. | | |X | | 1|
+| De leerling kan de gegevens van een taak bewaren in een databank. | | X| | | 3|
 | De leerling kan de gegevens uitlezen uit de databank. | X| | | |5 |
 | De leerling voorziet formulier-validatie in JavaScript. | | | |X |0 |
 | __Uitbreiding__|
@@ -20,4 +20,4 @@
 * In de lijst met taken verwijs je naar een 'begin.php'-pagina. Deze bestaat niet. (-2)
 * Bovendien zet je daar in de $_GET een 'actie'. Deze 'actie' controleer je niet, ook niet in je index.php. (-1)
 
-Je behaalde een score van __19/50__
+Je behaalde een score van __21/50__
